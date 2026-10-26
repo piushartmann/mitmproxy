@@ -16,7 +16,7 @@ RUN apk add --no-cache \
         llvm-dev \
     && ln -sf /usr/lib/libLLVM.so.22.1 /usr/lib/libLLVM.so \
     && cargo install --locked bpf-linker \
-    && PATH="/root/.cargo/bin:${PATH}" AYA_BUILD_SKIP=1 pip3 install --break-system-packages --no-cache-dir mitmproxy==12.3.0 \
+    && PATH="/root/.cargo/bin:${PATH}" AYA_BUILD_SKIP=1 pip3 install --break-system-packages --no-cache-dir mitmproxy==12.3.1 \
     && apk del .build-deps \
     && rm -rf /root/.cache /tmp/*
 
